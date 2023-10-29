@@ -54,3 +54,27 @@
     - border-color: red;
     - word-spacing: 5px;
     - letter-spacing: 5px;
+
+
+### Class-9 - CSS
+
+ - selectors
+    - child selector
+    - * {}
+    - h1 + p
+        <h1>
+        <p>
+        <p>
+    - h1 ~ p
+        <h1>
+        <p>
+        <p>
+    - type selector
+        h1, h2, h3
+    - #example
+        <p id="example">
+    - .example
+        <p class="example">
+        <h1 class="example">
+    - body {}
+
