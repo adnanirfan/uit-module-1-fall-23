@@ -78,3 +78,28 @@
         <h1 class="example">
     - body {}
 
+
+### Class-10
+
+    - Colors
+        - RGB: color: rgb(0, 255, 0)
+        - RGBA: color: rgba(0, 255, 0, 1)
+        - Hex Code: #FFFFFF #000000 #FF0000 #00FF00 #0000FF
+        - Color Name: black brown
+    - Font-Family
+        - @font-face {
+            font-family: Ali;
+            src: url(../font/ali.ttf)
+        }
+    - Font-weight
+    - text-shadow
+    - text-alignment
+    - display: hidden
+    - pseudo selector
+        - :active
+        - :hover
+        - :visited
+        - :focus
+        - :blink
+        - :first-letter
+        - :first-name

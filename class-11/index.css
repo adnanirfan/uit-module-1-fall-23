@@ -1,0 +1,42 @@
+@font-face {
+  font-family: "Ali";
+  src: url(./font/EduTASBeginner-VariableFont_wght.ttf);
+}
+
+body {
+  font-family: Ali;
+}
+
+.container {
+  min-width: 200px;
+  min-height: 100px;
+  background-color: lightblue;
+}
+
+.box {
+  max-width: 400px;
+  max-height: 200px;
+  background-color: lightgreen;
+  overflow-y: auto;
+}
+
+body {
+  text-align: center;
+}
+p {
+  width: 300px;
+  padding: 50px;
+  border: 20px solid #0088dd;
+}
+p.example {
+  margin: 10px auto 10px auto;
+  text-align: left;
+}
+
+li {
+  display: inline;
+  margin-right: 10px;
+}
+li.coming-soon {
+  display: none;
+}

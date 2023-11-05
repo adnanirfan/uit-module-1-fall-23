@@ -1,0 +1,23 @@
+ol,
+ul {
+  list-style-type: lower-roman;
+  list-style-image: url("images/star.png");
+}
+
+ul {
+  width: 150px;
+  border: 1px solid brown;
+}
+li {
+  margin: 10px;
+}
+ul.illuminations {
+  list-style-position: outside;
+}
+ul.season {
+  list-style-position: inside;
+}
+
+/* ul {
+  list-style: inside circle;
+} */
