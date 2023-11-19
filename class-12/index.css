@@ -1,0 +1,71 @@
+body {
+  display: flex;
+  justify-content: center;
+  background-color: #f0f2f5;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#layout {
+  display: flex;
+  /* margin: 200px; */
+  width: 80%;
+  /* border: 1px solid red; */
+}
+
+#logo {
+  margin: -9px;
+}
+
+h2 {
+  margin-top: 10px;
+}
+#left-section {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}
+#right-section #login-form {
+  background-color: #fff;
+  box-shadow: 0px 2px 3px 1px lightslategray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+}
+#right-section #login-form input {
+  padding: 10px;
+  border-color: rgb(238, 238, 238);
+  border-radius: 5px;
+  border: 1px solid #dddfe2;
+  margin-bottom: 10px;
+}
+#right-section #login-form button:nth-child(3) {
+  background-color: #1877f2;
+  border-color: #1877f2;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 0;
+  border-width: 1px;
+  border-style: solid;
+}
+#right-section #login-form :nth-child(4) {
+  text-decoration: none;
+}
+#right-section #login-form :nth-child(4):hover {
+  text-decoration: underline;
+}
+#right-section #login-form button:nth-child(6) {
+  background-color: #36a420;
+  border-color: #36a420;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 0;
+  border-width: 1px;
+  border-style: solid;
+}
+#right-section #create-page a {
+  color: black;
+}
