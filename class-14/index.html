@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Javascript - 2</title>
+    <script>
+      let q = +prompt("Enter 1st Number");
+      let w = +prompt("Enter 2nd Number");
+      let o = prompt("Enter Math Operator (+, -, * or /)");
+      let result;
+      let operation;
+
+      if (o === "+") {
+        result = q + w;
+        operation = "Sum";
+      }
+
+      if (o === "-") {
+        result = q - w;
+        operation = "Sub";
+      }
+
+      if (o === "*") {
+        result = q * w;
+        operation = "Mul";
+      }
+
+      if (o === "/") {
+        result = q / w;
+        operation = "Divide";
+      }
+      alert(operation + " is: " + result);
+    </script>
+  </head>
+  <body>
+    <h1>Javascript - 2-</h1>
+  </body>
+</html>
