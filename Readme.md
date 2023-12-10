@@ -105,8 +105,7 @@
 
 ### Class-12
 
-- Facebook
-  -
+- ## Facebook
 
 ### Class-13
 
@@ -119,4 +118,14 @@
         - number (312323)
     - alert (function, shows a pop up)
     - typeof abc
-    - 
+    -
+
+### Class-14
+
+    - Alert Prompt
+    - Calculator
+    - if else
+    ===
+    ==
+    <
+    >
