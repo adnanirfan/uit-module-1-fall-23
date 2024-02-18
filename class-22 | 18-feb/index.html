@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Javascript</title>
+  </head>
+  <body>
+    <h1>Javascript</h1>
+    <!-- 
+      Input Fields:
+      Name
+      Module
+      Year
+
+      Button:
+      Add User
+
+      <h1>Name: {name}</h1>
+      <h1>Module: {module}</h1>
+      <h1>Year: {year}</h1>
+     -->
+
+    <input id="name-field" type="text" placeholder="Name" />
+    <input id="module-field" type="text" placeholder="Module" />
+    <input id="year-field" type="text" placeholder="Year" />
+
+    <button onclick="addUserRow()">Add User</button>
+
+    <h1 id="name-heading"></h1>
+    <h1 id="module-heading"></h1>
+    <h1 id="year-heading"></h1>
+
+    <table border="1">
+      <tr>
+        <th>Name</th>
+        <th>Module</th>
+        <th>Year</th>
+        <th>Actions</th>
+      </tr>
+    </table>
+
+    <script src="index.js"></script>
+  </body>
+</html>
