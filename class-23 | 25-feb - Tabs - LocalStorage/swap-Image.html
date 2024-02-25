@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      src="../class-4/images/image1.jpeg"
+      width="200"
+      id="ugly1"
+      onClick="makeInvisible1();"
+    />
+    <img
+      src="../class-4/images/image2.jpeg"
+      width="200"
+      id="ugly2"
+      onClick="makeInvisible2();"
+    />
+
+    <script>
+      function makeInvisible1() {
+        // document.getElementById("ugly").style.display = "none";
+        document.getElementById("ugly1").className = "hidden";
+        document.getElementById("ugly2").className = "";
+      }
+      function makeInvisible2() {
+        // document.getElementById("ugly").style.display = "none";
+        document.getElementById("ugly1").className = "";
+        document.getElementById("ugly2").className = "hidden";
+      }
+    </script>
+  </body>
+</html>
