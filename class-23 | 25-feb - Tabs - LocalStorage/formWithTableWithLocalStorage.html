@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      .hidden {
+        display: none;
+      }
+      div {
+        /* width: 200px;
+        height: 200px; */
+      }
+      div:nth-child(1) {
+        /* background-color: red; */
+      }
+      div:nth-child(2) {
+        /* background-color: blue; */
+      }
+    </style>
+  </head>
+  <body onload="onLoad()">
+    <button onclick="switchTab('add-user-form')">Add New User</button>
+    <button onclick="switchTab('list')">Users List</button>
+
+    <div id="add-user-form">
+      <input type="text" id="name" />
+      <input type="text" id="module" />
+      <input type="text" id="year" />
+      <button onclick="addUser()">Add User</button>
+    </div>
+
+    <div id="list" class="hidden">
+      <table id="table">
+        <tr>
+          <th>Name</th>
+          <th>Module</th>
+          <th>Year</th>
+        </tr>
+      </table>
+    </div>
+
+    <script>
+      const users = [];
+
+      function onLoad() {
+        const users = JSON.parse(localStorage.getItem("users"));
+
+        if (users) {
+          for (let i = 0; i < users.length; i++) {
+            const user = users[i];
+            const record = document.createElement("tr");
+            record.innerHTML = `
+              <td> <b>${user.name}</b> </td>
+              <td> <b>${user.module}</b> </td>
+              <td> <b>${user.year}</b> </td>
+            `;
+
+            document.getElementById("table").appendChild(record);
+          }
+        }
+      }
+
+      function switchTab(tab) {
+        if (tab === "add-user-form") {
+          document.getElementById("add-user-form").className = "";
+          document.getElementById("list").className = "hidden";
+        } else {
+          document.getElementById("add-user-form").className = "hidden";
+          document.getElementById("list").className = "";
+        }
+      }
+
+      function addUser() {
+        let name = document.getElementById("name").value;
+        let module = document.getElementById("module").value;
+        let year = document.getElementById("year").value;
+
+        // Data Type object: {}
+        users.push({ name, module, year });
+
+        localStorage.setItem("users", JSON.stringify(users));
+
+        switchTab("list");
+
+        const record = document.createElement("tr");
+        record.innerHTML = `
+          <td> <b>${name}</b> </td>
+          <td> <b>${module}</b> </td>
+          <td> <b>${year}</b> </td>
+        `; // template string
+
+        // record.innerHTML = `Name: <b>${name}</b>, Module: <b>${module}</b>, <b>Year: ${year}</b>`; // template string
+
+        // record.innerHTML =
+        //   "Name: <b>" +
+        //   name +
+        //   "</b>, Module: <b>" +
+        //   module +
+        //   "</b>, <b>Year: " +
+        //   year +
+        //   "</b>";
+
+        document.getElementById("table").appendChild(record);
+      }
+    </script>
+  </body>
+</html>

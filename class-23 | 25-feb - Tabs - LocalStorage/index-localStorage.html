@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>LocalStorage</title>
+  </head>
+  <body>
+    <h1>LocalStorage</h1>
+
+    <div>
+      <button onclick="loadData()">Load Data</button>
+    </div>
+
+    <input type="text" id="name" placeholder="Enter your name" />
+    <input type="text" id="age" placeholder="Enter your age" />
+    <button onclick="saveData()">Save Data</button>
+
+    <script>
+      function saveData() {
+        var name = document.getElementById("name").value;
+        var age = document.getElementById("age").value;
+        document.getElementById("name").value = "";
+        document.getElementById("age").value = "";
+        localStorage.setItem("name", name);
+        localStorage.setItem("age", age);
+      }
+
+      function loadData() {
+        var name = localStorage.getItem("name");
+        var age = localStorage.getItem("age");
+        document.getElementById("name").value = name;
+        document.getElementById("age").value = age;
+      }
+
+      // <script>
+      // localStorage.clear(); // Clear LocalStorage
+      // localStorage.setItem("name", "John"); // Set LocalStorage Item
+      // localStorage.getItem("name"); // Get LocalStorage Item
+      // localStorage.removeItem("name"); // Remove LocalStorage Item
+    </script>
+  </body>
+</html>
