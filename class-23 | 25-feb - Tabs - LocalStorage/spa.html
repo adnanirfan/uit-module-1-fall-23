@@ -1,0 +1,33 @@
+
+write html and js code to display two divs with different background colors. When the user clicks on the first div, it should disappear and vice versa.
+<html>
+  <head>
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      style="background-color: red; width: 200px; height: 200px;"
+      id="ugly"
+      onClick="makeInvisible();"
+    ></div>
+    <div
+      style="background-color: blue; width: 200px; height: 200px;"
+      id="pretty"
+      onClick="makeInvisible();"
+    ></div>
+    <script>
+      function makeInvisible() {
+        if (event.target.id === "ugly") {
+          document.getElementById("ugly").className = "hidden";
+          document.getElementById("pretty").className = "";
+        } else {
+          document.getElementById("ugly").className = "";
+          document.getElementById("pretty").className = "hidden";
+        }
+      }
+    </script>
+  </body>
